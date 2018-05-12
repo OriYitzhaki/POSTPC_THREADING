@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">POSTPC_THREADING</string>
+    <string name="asynctask_activity">AsyncTask Activity</string>
+    <string name="threads_activity">Threads Activity</string>
+    <string name="create">create</string>
+    <string name="start">start</string>
+    <string name="cancel">cancel</string>
+    <string name="done">Done</string>
+</resources>
