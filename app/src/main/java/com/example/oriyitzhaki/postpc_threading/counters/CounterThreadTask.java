@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
-public class CounterThreadTask extends CounterTask  implements Runnable {
+public class CounterThreadTask extends BaseCounterTask implements Runnable {
     private static final String HANDLER_PROGRESS_MSG_KEY = "message";
 
     private Handler handler;

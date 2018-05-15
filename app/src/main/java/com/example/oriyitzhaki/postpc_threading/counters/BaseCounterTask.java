@@ -2,7 +2,7 @@ package com.example.oriyitzhaki.postpc_threading.counters;
 
 import com.example.oriyitzhaki.postpc_threading.TaskFragment;
 
-abstract public class CounterTask {
+abstract public class BaseCounterTask {
 
     public static final int MAX_PROGRESS = 10;
     static final int SLEEP_DURATION = 500;

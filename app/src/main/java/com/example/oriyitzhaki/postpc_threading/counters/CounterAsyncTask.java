@@ -1,19 +1,15 @@
 package com.example.oriyitzhaki.postpc_threading.counters;
 
 import android.os.AsyncTask;
-import android.os.Looper;
-import android.os.Message;
-import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-public class CounterAsyncTask extends CounterTask {
-    private CounterTask asyncTask;
+public class CounterAsyncTask extends BaseCounterTask {
+    private InnerCounterTask asyncTask;
 
     @Override
     public void create() {
-        asyncTask = new CounterTask(listener);
+        asyncTask = new InnerCounterTask(listener);
     }
 
     @Override
@@ -28,10 +24,10 @@ public class CounterAsyncTask extends CounterTask {
         }
     }
 
-    private static final class CounterTask extends AsyncTask<Void, Integer, Void> {
+    private static final class InnerCounterTask extends AsyncTask<Void, Integer, Void> {
         private final OnProgressUpdateListener listener;
 
-        private CounterTask(OnProgressUpdateListener listener) {
+        private InnerCounterTask(OnProgressUpdateListener listener) {
             this.listener = listener;
         }
 

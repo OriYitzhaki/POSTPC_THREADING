@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.oriyitzhaki.postpc_threading.TaskFragment;
-import com.example.oriyitzhaki.postpc_threading.counters.CounterTask;
+import com.example.oriyitzhaki.postpc_threading.counters.BaseCounterTask;
 import com.example.oriyitzhaki.postpc_threading.R;
 
 abstract class TaskActivity extends AppCompatActivity{
@@ -26,5 +26,5 @@ abstract class TaskActivity extends AppCompatActivity{
         }
     }
 
-    abstract protected CounterTask getCounterTask();
+    abstract protected BaseCounterTask getCounterTask();
 }

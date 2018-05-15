@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.oriyitzhaki.postpc_threading.counters.CounterTask;
+import com.example.oriyitzhaki.postpc_threading.counters.BaseCounterTask;
 
-public class TaskFragment extends Fragment implements View.OnClickListener , CounterTask.OnProgressUpdateListener{
+public class TaskFragment extends Fragment implements View.OnClickListener , BaseCounterTask.OnProgressUpdateListener{
 
     private static final String KEY_TASK_PROGRESS_STATE = "Task progress";
     private static final String KEY_BUTTON_ENABLED_STATES = "Button enabled";
@@ -22,7 +22,7 @@ public class TaskFragment extends Fragment implements View.OnClickListener , Cou
     private Button startButton;
     private Button cancelButton;
 
-    private CounterTask task;
+    private BaseCounterTask task;
 
     private TextView taskProgressText;
 
@@ -30,7 +30,7 @@ public class TaskFragment extends Fragment implements View.OnClickListener , Cou
     public TaskFragment() {
     }
 
-    public static TaskFragment newInstance(CounterTask task) {
+    public static TaskFragment newInstance(BaseCounterTask task) {
         TaskFragment fragment = new TaskFragment();
         fragment.task = task;
         return fragment;
@@ -107,7 +107,7 @@ public class TaskFragment extends Fragment implements View.OnClickListener , Cou
 
     @Override
     public void onProgressUpdate(int progress) {
-        if (progress == CounterTask.MAX_PROGRESS) {
+        if (progress == BaseCounterTask.MAX_PROGRESS) {
             toggleEnabled(cancelButton, createButton);
             taskProgressText.setText(R.string.done);
             return;
