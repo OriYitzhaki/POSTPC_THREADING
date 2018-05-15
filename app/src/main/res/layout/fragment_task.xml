@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/task_progress_text"
@@ -11,15 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="112dp"
         android:layout_centerInParent="true"
-        tools:text="Place Holder"
-        />
+        tools:text="Place Holder" />
 
     <RelativeLayout
         android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/task_progress_text">
+        android:layout_below="@id/task_progress_text"
+        android:layout_marginTop="16dp">
 
 
         <Button
@@ -27,34 +26,35 @@
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="#00A0A0"
-            android:text="@string/create"
             android:layout_alignParentStart="true"
-            />
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#00A0A0"
+            android:text="@string/create" />
+
         <Button
             android:id="@+id/start_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="#A00AA0"
-            android:text="@string/start"
             android:layout_centerInParent="true"
-            />
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#A00AA0"
+            android:enabled="false"
+            android:text="@string/start" />
+
         <Button
             android:id="@+id/cancel_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="#A00000"
-            android:text="@string/cancel"
             android:layout_alignParentEnd="true"
-            />
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#A00000"
+            android:enabled="false"
+            android:text="@string/cancel" />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -14,7 +14,9 @@ public class CounterAsyncTask extends BaseCounterTask {
 
     @Override
     public void start() {
-        asyncTask.execute();
+        if (asyncTask != null){
+            asyncTask.execute();
+        }
     }
 
     @Override
